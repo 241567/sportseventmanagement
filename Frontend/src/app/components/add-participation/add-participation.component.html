@@ -1,0 +1,69 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+        
+            <hr />
+            <div class="card-body">
+                <h3 class="text-center"  style="align-items: center;"> Add Participation </h3>
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label>Player Id</label>
+ 
+                            <select class="form-control" name="player_id" (change)="getPlayername($event)" aria-label="Default select example">
+                                <option selected>Choose Player Id</option>
+                                <option value="{{playerId}}" *ngFor="let playerId of player_id">{{playerId}}</option>
+                               
+                              </select>
+                    </div>
+                    <div class="form-group">
+                        <label> Player Name</label>
+                        <input type="text" readonly class="form-control" id="age" [(ngModel)]="participation.player_name"
+                            name="age">
+                    </div>
+                    <div class="form-group">
+                        <label>Event Id</label>
+ 
+                            <select class="form-control" name="eventId" (change)="getEventname($event)" aria-label="Default select example">
+                                <option selected>Choose Event Id</option>
+                                <option value="{{event}}" *ngFor="let event of event_id">{{event}}</option>
+                               
+                              </select>
+                    </div>
+                    <div class="form-group">
+                        <label> Event Name</label>
+                        <input type="text" readonly class="form-control" id="event_name" [(ngModel)]="participation.event_name"
+                            name="event_name">
+                    </div>
+                    <div class="form-group">
+                        <label>Sports Id</label>
+ 
+                            <select class="form-control" name="sportsId" (change)="getSportsname($event)" aria-label="Default select example">
+                                <option selected>Choose Sports Id</option>
+                                <option value="{{sport}}" *ngFor="let sport of sports_id">{{sport}}</option>
+                               
+                              </select>
+                    </div>
+                    <div class="form-group">
+                        <label> Sports Name</label>
+                        <input type="text" readonly class="form-control" id="sports_name" [(ngModel)]="participation.sports_name"
+                            name="sports_name">
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+ 
+                            <select class="form-control" name="status" aria-label="Default select example">
+                                <option selected>Choose Status</option>
+                                <option value="Approved">Approved</option>
+                                <option value="declined">Declined</option>
+                                <option value="Approved">Approved</option>
+                               
+                              </select>
+                    </div>
+                    <button class="btn btn-success" type="submit">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

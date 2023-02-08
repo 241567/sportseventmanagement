@@ -1,0 +1,31 @@
+<div class = "container" >
+    <h2 style="text-align: center;">Player List</h2>
+</div><br/>
+<table class = "table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Player Id</th>
+            <th> Player Name</th>
+            <th>Age</th>
+            <th> Contact </th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Sports Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let player of players" >
+            <td> {{ player.playerId}} </td>
+            <td> {{ player.playerName }} </td>
+            <td> {{ player.age }} </td>
+            <td> {{ player.contactNumber }} </td>
+            <td>{{player.email}}</td>
+            <td>{{player.gender}}</td>
+            <td>{{player.sportsName}}</td>
+            <td>
+                <button (click) = "deletePlayer(player.playerId)" (click)="refresh()"class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-success" routerLink="/create-player">Add Player</button>

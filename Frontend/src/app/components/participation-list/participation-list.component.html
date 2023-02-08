@@ -1,0 +1,30 @@
+<div class = "row">
+    <h2>Participation List</h2>
+</div>
+
+<table class = "table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Player Id</th>
+            <th>Player Name</th>
+            <th>Event Name</th>
+            <th>Sports Name </th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let parti of participation" >
+            <td> {{ parti.player_id}} </td>
+            <td> {{ parti.player_name }} </td>
+            <td> {{ parti.event_name}} </td>
+            <td> {{ parti.sports_name}} </td>
+            <td> {{ parti.status}} </td>
+            <td>
+                <button (click) = "updateEmployee(parti.status)" class = "btn btn-primary"> Update</button>
+               
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-success" routerLink="/add-participation">Add Participation</button>

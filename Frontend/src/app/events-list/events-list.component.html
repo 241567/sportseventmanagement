@@ -1,0 +1,31 @@
+<div class = "container" style="text-align: center;">
+    <h2> Events List</h2>
+</div>
+<table class = "table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Event Id</th>
+            <th> Event Date</th>
+            <th> Event Name </th>
+            <th> noOfSlots</th>
+            <th>Sports Name</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let event of events" >
+            <td> {{ event.eventId }} </td>
+            <td> {{ event.eventDate }} </td>
+            <td> {{event.eventName}} </td>
+            <td>{{event.noOfSlots}}</td>
+             <td>{{event.sportsName}}</td>
+            <td>
+                <button (click) = "deleteEvents(event.eventId)" (click)="refresh()" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "eventsDetails(event.eventName)" class = "btn btn-primary" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br/>
+<button class="btn btn-success" routerLink="/create-events">Add Event</button>
+

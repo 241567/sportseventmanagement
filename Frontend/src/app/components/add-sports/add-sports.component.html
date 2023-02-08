@@ -1,0 +1,45 @@
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="noOfPlayers">Players</label>
+          <input
+            type="text"
+            class="form-control"
+            id="noOfPlayers"
+            required
+            [(ngModel)]="sports.noOfPlayers"
+            name="noOfPlayer"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="description">Sports Name</label>
+          <input
+            class="form-control"
+            id="description"
+            required
+            [(ngModel)]="sports.sportsName"
+            name="sportsName"
+          />
+        </div>
+        <div class="form-group">
+            <label for="sportsType">Sports Type</label>
+            <input
+              class="form-control"
+              id="sportsType"
+              required
+              [(ngModel)]="sports.sportsType"
+              name="sportsType"
+            />
+          </div>
+  
+        <button (click)="saveSports()"  class="btn btn-success">Submit</button>
+      </div>
+  
+     <div *ngIf="submitted">
+        <h4>Sports was submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newSports()">Add</button>
+      </div>
+    </div>
+  </div>

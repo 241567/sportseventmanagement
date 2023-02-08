@@ -1,0 +1,31 @@
+<div *ngIf="viewMode;">
+    <div *ngIf="currentSports.sportsId">
+        <div class="card text-left" id="card1" style="padding-left: 3%;">
+      <h4 >Current Sports Details</h4>
+      <div style="padding: left 0.5em;">
+        <div >
+            <label><strong>Id:</strong></label> {{ currentSports.sportsId }}
+          </div>
+          <div>
+            <label><strong>No.of Players:</strong></label>
+            {{ currentSports.noOfPlayers }}
+          </div>
+          <div>
+            <label><strong>Sports Name:</strong></label>
+            {{ currentSports.sportsName}}
+          </div>
+          <div>
+            <label><strong>Sports Type:</strong></label>
+            {{ currentSports.sportsType}}
+          </div>
+      </div>
+          <a
+      class="badge badge-warning"
+      routerLink="/tutorials/{{ currentSports.sportsId }}"
+    ></a>
+</div>
+<div *ngIf="!currentSports">
+    <br />
+    <p>Please click on a Sports...</p>
+  </div>
+</div>

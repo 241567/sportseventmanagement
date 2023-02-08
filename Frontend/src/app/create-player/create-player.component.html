@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+        
+            <hr />
+            <div class="card-body">
+                <h3 class="text-center"  style="align-items: center;"> Add Player </h3>
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label>Player Name</label>
+                        <input type="text" class="form-control" id="playerName" [(ngModel)]="players.playerName"
+                            name="firstName">
+                    </div>
+                    <div class="form-group">
+                        <label> Age</label>
+                        <input type="text" class="form-control" id="age" [(ngModel)]="players.age"
+                            name="age">
+                    </div>
+                    <div class="form-group">
+                        <label>Contact Number</label>
+                        <input type="text" class="form-control" id="contactNumber" [(ngModel)]="players.contactNumber"
+                            name="contactNumber">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" class="form-control" id="email" [(ngModel)]="players.email"
+                            name="email">
+                    </div>
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <input type="text" class="form-control" id="gender" [(ngModel)]="players.gender"
+                            name="gender">
+                    </div>
+                    <div class="form-group">
+                        <label>Sports Name</label>
+                        <input type="text" class="form-control" id="sportsName" [(ngModel)]="players.sportsName"
+                            name="sportsName">
+                    </div>
+                    <br />
+                    <button class="btn btn-success" type="submit">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
